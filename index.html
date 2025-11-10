@@ -10,6 +10,7 @@
 <body>
     <div class="container">
         <h1>Task Manager</h1>
+
         <div class="input-section">
             <h2>Add New Task</h2>
             <label for="task-name">Task Name</label>
@@ -28,6 +29,32 @@
         <input type="date" id="task-deadline">
 
         <button id="add-task-btn"> + Add Task</button>
+
+        <div class="filter-section">
+            <h2>Filter Tasks</h2>
+            <label>Status: </label>
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="In Progress">In Progress</button>
+            <button class="filter-btn" data-filter="Completed">Completed</button>
+            <button class="filter-btn" data-filter="Overdue">Overdue</button>
+
+            <br>
+            <br>
+
+            <label>Category: </label>
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Work">Work</button>
+            <button class="filter-btn" data-filter="Personal">Personal</button>
+            <button class="filter-btn" data-filter="School">School</button>
+        </div>
+
+        <div class="task-display">
+            <h2>My Tasks</h2>
+
+            <div id="task-list">
+                <p class="no-tasks">No tasks yet. Add your first task up 🔝</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
