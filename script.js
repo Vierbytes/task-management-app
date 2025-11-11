@@ -189,4 +189,4 @@ function initializeApp() {
     console.log('✅ Task Magician Ready!')
 }
 
-initializeApp();
+initializeApp()

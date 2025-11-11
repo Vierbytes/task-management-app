@@ -50,3 +50,56 @@ select {
     border-radius: 5px;
     font-size: 16px;
 }
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+#add-task-btn {
+    background: hsl(229, 76%, 66%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#add-task-btn:hover {
+    background: hsl(231, 59%, 58%);
+    transform: translateY(-2px);
+}
+
+.filter-section {
+    background: hsl(210, 17%, 98%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: hsl(210, 16%, 93%);
+    color: hsl(210, 9%, 31%);
+    margin: 5px;
+    padding: 8px 15px;
+}
+
+.filter-btn:hover {
+    background: hsl(210, 14%, 89%);
+}
+
+.filter-btn.active {
+    background: hsl(229, 76%, 66%);
+    color: hsl(0, 0%, 100%);
+}
+
+.task-display {
+    margin-top: 20px;
+}
+
+#task-list {
+    margin-top: 20px;
+}
