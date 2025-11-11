@@ -180,3 +180,13 @@ function checkOverdueTasks() {
     })
     saveToLocalStorage()
 }
+
+function initializeApp() {
+    console.log('🔮 Task Magician Starting...')
+    loadFromLocalStorage()
+    checkOverdueTasks()
+    displayTasks()
+    console.log('✅ Task Magician Ready!')
+}
+
+initializeApp();
