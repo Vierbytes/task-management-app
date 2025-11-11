@@ -1,4 +1,3 @@
-window.addEventListener('load', () => {
     let tasks = []
 
     let currentStatusFilter = 'all'
@@ -32,6 +31,16 @@ window.addEventListener('load', () => {
 
         console.log('Task added!', newTask)
     }
+
+    function deleteTask(taskId) {
+    if (confirm('Are you sure you want to delete this task?')) {
+        tasks = tasks.filter(task => task.id !== taskId);
+
+        displayTasks();
+
+        console.log('🗑️ Task deleted!');
+    }
+}
 
     function displayTasks() {
         const taskList = document.getElementById('task-list')
@@ -78,10 +87,9 @@ window.addEventListener('load', () => {
                         <option value="In Progress" ${task.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
                         <option value="Completed" ${task.status === 'Completed' ? 'selected' : ''}>Completed</option>
                     </select>
-                    <button class="delete-btn" onclick="deleteTask(${task.id})"> Delete</button>
+                    <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
                 </div>
             `
-
             taskList.appendChild(taskCard)
         })
     }
@@ -113,5 +121,13 @@ window.addEventListener('load', () => {
             addTask()
         }
     })
-})
+
+    function updateTaskStatus(taskId, newStatus) {
+        const task = tasks.find(t => t.id === taskId)
+        if (task) {
+            task.status = newStatus
+            displayTasks()
+            console.log(`✅ Task "${task.name}" updated to: ${newStatus}`)
+        }
+    }
 
