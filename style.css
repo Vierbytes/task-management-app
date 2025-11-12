@@ -93,13 +93,13 @@ button {
 
 .filter-btn.active {
     background: hsl(229, 76%, 66%);
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%)
 }
 
 .task-display {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 #task-list {
-    margin-top: 20px;
+    margin-top: 20px
 }
